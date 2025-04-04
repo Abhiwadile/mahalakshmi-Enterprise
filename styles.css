@@ -1,0 +1,374 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling globally */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    position: relative; /* For the scroll-to-top button positioning */
+}
+
+h1, h2, h3 {
+    color: #2a2a2a;
+}
+
+.button, .product-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .product-button:hover {
+    background-color: #ff6600; /* Orange */
+}
+
+/* Header Styles */
+header {
+    background-color: #04b8ff; /* Dark Blue */
+    color: white;
+    padding: 20px 0;
+    position: sticky; /* Make the header stick to the top on scroll */
+    top: 0;
+    z-index: 100; /* Ensure it stays above other content */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    background-color: #ff6600; /* Orange */
+    border-radius: 5px;
+}
+
+/* Banner Section */
+.banner {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    padding: 60px 20px;
+    background-color: white;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Our Expertise Section */
+.expertise {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.expertise h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.expertise-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.expertise-list ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.expertise-list ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.expertise-list ul li::before {
+    content: '\f00c'; /* Checkmark icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #04b8ff;
+}
+
+/* Products Section */
+.products {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+.product-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: block;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #003366;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #ff6600; /* Orange */
+    outline: none;
+}
+
+#contact-form button {
+    padding: 15px 30px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ff6600; /* Orange */
+}
+
+/* Contact Details Section */
+.contact-details {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #04b8ff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2rem;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e; /* Darker WhatsApp Green */
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    opacity: 1;
+}
+
+/* Show the button when scrolling down */
+body.show-scroll-btn #scrollTopBtn {
+    display: block;
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
